@@ -23,7 +23,6 @@ class UserController {
             name,
             email,
             provider,
-            password,
         });
     }
 }
