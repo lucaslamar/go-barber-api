@@ -7,8 +7,7 @@
 
 # testing
 /coverage
-temp/uploads
-
+tmp/uploads/*.png
 # production
 /build
 
