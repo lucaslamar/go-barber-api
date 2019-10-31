@@ -5,7 +5,7 @@ import pt from 'date-fns/locale/pt';
 import Appointment from '../models/Appointment';
 import User from '../models/User';
 import File from '../models/File';
-import Notification from '../schemas/Notfication';
+import Notification from '../schemas/Notification';
 
 class AppointmentController {
     async index(req, res) {
@@ -50,6 +50,12 @@ class AppointmentController {
         const isProvider = await User.findOne({
             where: { id: provider_id, provider: true },
         });
+
+        if (isProvider.id === req.userId) {
+            return res
+                .status(400)
+                .json({ error: 'You cannot create appointments for yourself' });
+        }
 
         if (!isProvider) {
             return res.status(401).json({

@@ -1,6 +1,6 @@
-import moongoose from 'mongoose';
+import mongoose from 'mongoose';
 
-const NotificationSchema = new moongoose.Schema(
+const NotificationSchema = new mongoose.Schema(
     {
         content: {
             type: String,
@@ -20,4 +20,5 @@ const NotificationSchema = new moongoose.Schema(
         timestamps: true,
     }
 );
-export default moongoose.model('Notification', NotificationSchema);
+
+export default mongoose.model('Notifications', NotificationSchema);
