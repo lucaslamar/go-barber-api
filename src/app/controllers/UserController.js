@@ -75,7 +75,7 @@ class UserController {
             return res.status(401).json({ error: 'Password does not match' });
         }
 
-        const { id, name, provider } = await user.update(req.body); // aqui como se trata de um update posso passar todos?
+        const { id, name, provider } = await user.update(req.body);
 
         return res.json({
             id,
