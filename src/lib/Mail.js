@@ -17,13 +17,6 @@ class Mail {
         this.configureTemplates();
     }
 
-    sendMail(message) {
-        return this.transporter.sendMail({
-            ...mailConfig.default,
-            ...message,
-        });
-    }
-
     configureTemplates() {
         const viewPath = resolve(__dirname, '..', 'app', 'views', 'emails');
 
@@ -41,6 +34,12 @@ class Mail {
             })
         );
     }
-}
 
+    sendMail(message) {
+        return this.transporter.sendMail({
+            ...mailConfig.default,
+            ...message,
+        });
+    }
+}
 export default new Mail();

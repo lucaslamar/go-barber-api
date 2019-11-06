@@ -115,7 +115,6 @@ class AppointmentController {
                     as: 'provider',
                     attributes: ['name', 'email'],
                 },
-
                 {
                     model: User,
                     as: 'user',
@@ -137,20 +136,16 @@ class AppointmentController {
                     'You can only cancel appointments two hours ind advance.',
             });
         }
-        appointment.canceled_at = new Date();
-
-        await appointment.save();
-
         await Mail.sendMail({
             to: `${appointment.provider.name} <${appointment.provider.email}>`,
             subject: 'agendamento cancelado',
-            template: 'cancelletion',
+            template: 'cancellation',
             context: {
                 provider: appointment.provider.name,
                 user: appointment.user.name,
                 date: format(
                     appointment.date,
-                    "'dia' d 'de' MMMM', às 'H:mm'h'",
+                    "'dia' dd 'de' MMMM', às' H:mm'h'",
                     {
                         locale: pt,
                     }
