@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img alt="GoBarber" title="GoBarber" src="https://github.com/lucaslamar/gym-point-api/blob/master/src/img/68747470733a2f2f726f636b6574736561742d63646e2e73332d73612d656173742d312e616d617a6f6e6177732e636f6d2f626f6f7463616d702d6865616465722e706e67.png" width="200px" />
+  <img alt="GoBarber" title="GoBarber" src="https://github.com/lucaslamar/go-baber-api/blob/master/src/img/68747470733a2f2f726f636b6574736561742d63646e2e73332d73612d656173742d312e616d617a6f6e6177732e636f6d2f626f6f7463616d702d6865616465722e706e67.png" width="200px" />
 </h1>
 
 # GoBarber-api
