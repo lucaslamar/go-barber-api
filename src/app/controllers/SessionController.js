@@ -40,6 +40,24 @@ class SessionController {
         }
         const { id, name, avatar, provider } = user;
 
+        if (avatar === null) {
+            const defaultAvatar = {
+                url: 'https://api.adorable.io/avatars/50/abott@adorable.png',
+            };
+            return res.json({
+                user: {
+                    id,
+                    name,
+                    email,
+                    provider,
+                    avatar: defaultAvatar,
+                },
+                token: jwt.sign({ id }, autoConfig.secret, {
+                    expiresIn: autoConfig.expiresIn,
+                }),
+            });
+        }
+
         return res.json({
             user: {
                 id,

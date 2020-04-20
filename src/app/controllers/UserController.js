@@ -88,6 +88,18 @@ class UserController {
             ],
         });
 
+        if (avatar === null) {
+            const defaultAvatar = {
+                url: 'https://api.adorable.io/avatars/50/abott@adorable.png',
+            };
+            return res.json({
+                id,
+                name,
+                email,
+                avatar: defaultAvatar,
+            });
+        }
+
         return res.json({
             id,
             name,
