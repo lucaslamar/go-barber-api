@@ -1,8 +1,9 @@
 <h1 align="center">
-  <img alt="GoBarber" title="GoBarber" src="https://github.com/lucaslamar/go-baber-api/blob/master/src/img/68747470733a2f2f726f636b6574736561742d63646e2e73332d73612d656173742d312e616d617a6f6e6177732e636f6d2f626f6f7463616d702d6865616465722e706e67.png" width="200px" />
+  <img alt="GoBarber" title="GoBarber" src="src/img/logo.svg" width="200px" />
 </h1>
 
 # GoBarber-api
+ <a href="https://github.com/lucaslamar/go-barber-react"><img alt="" src="https://img.shields.io/badge/Gobarber-Web-brightgreen"></a>
 > O GoBarber é um sistema de gerenciamento de agendamementos
 
 Com o Gobarber é possivel cadastrar com foto um usuario e dizer se o mesmo é um provedor de serviços ou não. O usuario comum pode cadastrar um agedamento para um dia especifico a um provider especifico o provider pode cancelar esse agendamento
@@ -60,7 +61,3 @@ Agora você pode usar a REST API Client para testar "**GoBarber**".
   <li>ESLint + Prettier + EditorConfig;</li>
   <li>Sequelize</li>
 </ul>
-
-
-
-
